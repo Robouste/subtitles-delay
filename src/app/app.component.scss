@@ -1,0 +1,43 @@
+* {
+	box-sizing: border-box;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: 16px;
+	padding: 16px;
+	.top {
+		height: 150px;
+
+		mat-card {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+		}
+	}
+	.panels {
+		display: flex;
+		justify-content: stretch;
+		gap: 16px;
+
+		& > div {
+			width: 50%;
+			height: calc(100vh - 150px - 48px);
+
+			mat-form-field {
+				height: 100%;
+				width: 100%;
+
+				textarea {
+					height: calc(100vh - 150px - 48px - 48px);
+				}
+			}
+		}
+	}
+
+	mat-card {
+		height: 100%;
+	}
+}
